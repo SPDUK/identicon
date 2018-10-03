@@ -1,21 +1,17 @@
 # Identicon
 
-**TODO: Add description**
-
 ## Installation
+Elixir version: `elixir 1.8.0-dev (compiled with Erlang/OTP 20)`
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `identicon` to your list of dependencies in `mix.exs`:
+* Clone or download the repo
+* Run `mix deps.get`
+* Input `Identicon.start` into iex, enter any string you like when prompted, 
+* This will create an image in that folder you can now open! 
 
-```elixir
-def deps do
-  [
-    {:identicon, "~> 0.1.0"}
-  ]
-end
-```
+If iex does not automatically start run `iex -S mix` and enter `Identicon.start`
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/identicon](https://hexdocs.pm/identicon).
+You should be now see a random image generated based on your input like so:
+
+![hello.png](hello.png)
+
 
