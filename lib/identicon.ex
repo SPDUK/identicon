@@ -1,6 +1,35 @@
 defmodule Identicon do
   @moduledoc """
+  Creates an image based on an input string, similar to what websites like github/wordpress use
+  """
+
+  @doc """
+    Starts by asking for input, stops if the user enters `.` else it will create the image
+  """
+  def start do
+    input = get_input()
+
+    case input do
+      "." ->
+        IO.puts("Bye!")
+
+      _ ->
+        main(input)
+    end
+  end
+
+  @doc """
+    Gets user input and downcases and trims it
+  """
+  def get_input do
+    IO.gets("Enter a string! or type '.' to stop \n")
+    |> String.downcase()
+    |> String.trim()
+  end
+
+  @doc """
     Takes in a string input and creates an image based on that string.
+    Restarts the loop again asking for another input after saving the image
   """
   def main(input) do
     input
@@ -11,6 +40,8 @@ defmodule Identicon do
     |> build_pixel_map
     |> draw_image
     |> save_image(input)
+
+    Identicon.start()
   end
 
   @doc """
