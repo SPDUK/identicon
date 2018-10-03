@@ -1,6 +1,5 @@
 # Identicon
 
-## Installation
 Elixir version: `elixir 1.8.0-dev (compiled with Erlang/OTP 20)`
 
 * Clone or download the repo
